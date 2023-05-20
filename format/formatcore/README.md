@@ -3,7 +3,7 @@
 # formatcore
 
 ```go
-import "github.com/princjef/gomarkdoc/format/formatcore"
+import "github.com/chengyumeng/gomarkdoc/format/formatcore"
 ```
 
 Package formatcore provides utilities for creating formatters like those found in the format package.
@@ -26,7 +26,7 @@ Package formatcore provides utilities for creating formatters like those found i
 
 
 <a name="Anchor"></a>
-## func [Anchor](<https://github.com/princjef/gomarkdoc/blob/master/format/formatcore/base.go#L49>)
+## func [Anchor](<https://github.com/chengyumeng/gomarkdoc/blob/master/format/formatcore/base.go#L49>)
 
 ```go
 func Anchor(anchor string) string
@@ -35,7 +35,7 @@ func Anchor(anchor string) string
 Anchor produces an anchor for the provided link.
 
 <a name="AnchorHeader"></a>
-## func [AnchorHeader](<https://github.com/princjef/gomarkdoc/blob/master/format/formatcore/base.go#L58>)
+## func [AnchorHeader](<https://github.com/chengyumeng/gomarkdoc/blob/master/format/formatcore/base.go#L58>)
 
 ```go
 func AnchorHeader(level int, text, anchor string) (string, error)
@@ -44,7 +44,7 @@ func AnchorHeader(level int, text, anchor string) (string, error)
 AnchorHeader converts the provided text and custom anchor link into a header of the provided level. The level is expected to be at least 1.
 
 <a name="Bold"></a>
-## func [Bold](<https://github.com/princjef/gomarkdoc/blob/master/format/formatcore/base.go#L15>)
+## func [Bold](<https://github.com/chengyumeng/gomarkdoc/blob/master/format/formatcore/base.go#L15>)
 
 ```go
 func Bold(text string) string
@@ -53,7 +53,7 @@ func Bold(text string) string
 Bold converts the provided text to bold
 
 <a name="CodeBlock"></a>
-## func [CodeBlock](<https://github.com/princjef/gomarkdoc/blob/master/format/formatcore/base.go#L25>)
+## func [CodeBlock](<https://github.com/chengyumeng/gomarkdoc/blob/master/format/formatcore/base.go#L25>)
 
 ```go
 func CodeBlock(code string) string
@@ -62,7 +62,7 @@ func CodeBlock(code string) string
 CodeBlock wraps the provided code as a code block. Language syntax highlighting is not supported.
 
 <a name="Escape"></a>
-## func [Escape](<https://github.com/princjef/gomarkdoc/blob/master/format/formatcore/base.go#L151>)
+## func [Escape](<https://github.com/chengyumeng/gomarkdoc/blob/master/format/formatcore/base.go#L151>)
 
 ```go
 func Escape(text string) string
@@ -71,7 +71,7 @@ func Escape(text string) string
 Escape escapes the special characters in the provided text, but leaves URLs found intact. Note that the URLs included must begin with a scheme to skip the escaping.
 
 <a name="GFMAccordion"></a>
-## func [GFMAccordion](<https://github.com/princjef/gomarkdoc/blob/master/format/formatcore/base.go#L119>)
+## func [GFMAccordion](<https://github.com/chengyumeng/gomarkdoc/blob/master/format/formatcore/base.go#L119>)
 
 ```go
 func GFMAccordion(title, body string) string
@@ -80,7 +80,7 @@ func GFMAccordion(title, body string) string
 GFMAccordion generates a collapsible content. The accordion's visible title while collapsed is the provided title and the expanded content is the body.
 
 <a name="GFMAccordionHeader"></a>
-## func [GFMAccordionHeader](<https://github.com/princjef/gomarkdoc/blob/master/format/formatcore/base.go#L132>)
+## func [GFMAccordionHeader](<https://github.com/chengyumeng/gomarkdoc/blob/master/format/formatcore/base.go#L132>)
 
 ```go
 func GFMAccordionHeader(title string) string
@@ -95,7 +95,7 @@ accordion := GFMAccordionHeader("Accordion Title") + "Accordion Body" + GFMAccor
 ```
 
 <a name="GFMAccordionTerminator"></a>
-## func [GFMAccordionTerminator](<https://github.com/princjef/gomarkdoc/blob/master/format/formatcore/base.go#L139>)
+## func [GFMAccordionTerminator](<https://github.com/chengyumeng/gomarkdoc/blob/master/format/formatcore/base.go#L139>)
 
 ```go
 func GFMAccordionTerminator() string
@@ -104,7 +104,7 @@ func GFMAccordionTerminator() string
 GFMAccordionTerminator generates the code necessary to terminate an accordion after the body. It is expected to be used in conjunction with GFMAccordionHeader\(\). See GFMAccordionHeader for a full description.
 
 <a name="GFMCodeBlock"></a>
-## func [GFMCodeBlock](<https://github.com/princjef/gomarkdoc/blob/master/format/formatcore/base.go#L44>)
+## func [GFMCodeBlock](<https://github.com/chengyumeng/gomarkdoc/blob/master/format/formatcore/base.go#L44>)
 
 ```go
 func GFMCodeBlock(language, code string) string
@@ -113,7 +113,7 @@ func GFMCodeBlock(language, code string) string
 GFMCodeBlock wraps the provided code as a code block and tags it with the provided language \(or no language if the empty string is provided\), using the triple backtick format from GitHub Flavored Markdown.
 
 <a name="Header"></a>
-## func [Header](<https://github.com/princjef/gomarkdoc/blob/master/format/formatcore/base.go#L69>)
+## func [Header](<https://github.com/chengyumeng/gomarkdoc/blob/master/format/formatcore/base.go#L69>)
 
 ```go
 func Header(level int, text string) (string, error)
@@ -122,7 +122,7 @@ func Header(level int, text string) (string, error)
 Header converts the provided text into a header of the provided level. The level is expected to be at least 1.
 
 <a name="Link"></a>
-## func [Link](<https://github.com/princjef/gomarkdoc/blob/master/format/formatcore/base.go#L92>)
+## func [Link](<https://github.com/chengyumeng/gomarkdoc/blob/master/format/formatcore/base.go#L92>)
 
 ```go
 func Link(text, href string) string
@@ -131,7 +131,7 @@ func Link(text, href string) string
 Link generates a link with the given text and href values.
 
 <a name="ListEntry"></a>
-## func [ListEntry](<https://github.com/princjef/gomarkdoc/blob/master/format/formatcore/base.go#L107>)
+## func [ListEntry](<https://github.com/chengyumeng/gomarkdoc/blob/master/format/formatcore/base.go#L107>)
 
 ```go
 func ListEntry(depth int, text string) string
@@ -140,7 +140,7 @@ func ListEntry(depth int, text string) string
 ListEntry generates an unordered list entry with the provided text at the provided zero\-indexed depth. A depth of 0 is considered the topmost level of list.
 
 <a name="PlainText"></a>
-## func [PlainText](<https://github.com/princjef/gomarkdoc/blob/master/format/formatcore/base.go#L188>)
+## func [PlainText](<https://github.com/chengyumeng/gomarkdoc/blob/master/format/formatcore/base.go#L188>)
 
 ```go
 func PlainText(text string) string
@@ -148,4 +148,4 @@ func PlainText(text string) string
 
 PlainText converts a markdown string to the plain text that appears in the rendered output.
 
-Generated by [gomarkdoc](<https://github.com/princjef/gomarkdoc>)
+Generated by [gomarkdoc](<https://github.com/chengyumeng/gomarkdoc>)

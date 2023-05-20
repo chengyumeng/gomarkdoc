@@ -7,8 +7,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/princjef/gomarkdoc/format/formatcore"
-	"github.com/princjef/gomarkdoc/lang"
+	"github.com/chengyumeng/gomarkdoc/format/formatcore"
+	"github.com/chengyumeng/gomarkdoc/lang"
 )
 
 // AzureDevOpsMarkdown provides a Format which is compatible with Azure

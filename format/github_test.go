@@ -5,9 +5,9 @@ import (
 	"path/filepath"
 	"testing"
 
+	"github.com/chengyumeng/gomarkdoc/format"
+	"github.com/chengyumeng/gomarkdoc/lang"
 	"github.com/matryer/is"
-	"github.com/princjef/gomarkdoc/format"
-	"github.com/princjef/gomarkdoc/lang"
 )
 
 func TestGitHubFlavoredMarkdown_Bold(t *testing.T) {
@@ -97,11 +97,11 @@ func TestGitHubFlavoredMarkdown_RawHeader(t *testing.T) {
 
 func TestGitHubFlavoredMarkdown_LocalHref(t *testing.T) {
 	tests := map[string]string{
-		"Normal Header":          "#normal-header",
-		" Leading whitespace":    "#leading-whitespace",
-		"Multiple	 whitespace":   "#multiple--whitespace",
-		"Special(#)%^Characters": "#specialcharacters",
-		"With:colon":             "#withcolon",
+		"Normal Header":           "#normal-header",
+		" Leading whitespace":     "#leading-whitespace",
+		"Multiple	 whitespace": "#multiple--whitespace",
+		"Special(#)%^Characters":  "#specialcharacters",
+		"With:colon":              "#withcolon",
 	}
 
 	for input, output := range tests {

@@ -19,10 +19,10 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/princjef/gomarkdoc"
-	"github.com/princjef/gomarkdoc/format"
-	"github.com/princjef/gomarkdoc/lang"
-	"github.com/princjef/gomarkdoc/logger"
+	"github.com/chengyumeng/gomarkdoc"
+	"github.com/chengyumeng/gomarkdoc/format"
+	"github.com/chengyumeng/gomarkdoc/lang"
+	"github.com/chengyumeng/gomarkdoc/logger"
 )
 
 // PackageSpec defines the data available to the --output option's template.
@@ -287,7 +287,10 @@ func buildConfig(configFile string) {
 }
 
 func runCommand(paths []string, opts commandOptions) error {
-	outputTmpl, err := template.New("output").Parse(opts.output)
+	outputTmpl, err := template.New("output").Funcs(map[string]interface{}{
+		"replace": func(src, a, b string) string {
+			return strings.ReplaceAll(src, a, b)
+		}}).Parse(opts.output)
 	if err != nil {
 		return fmt.Errorf("gomarkdoc: invalid output template: %w", err)
 	}

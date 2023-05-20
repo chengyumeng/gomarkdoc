@@ -6,8 +6,8 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/princjef/gomarkdoc/format"
-	"github.com/princjef/gomarkdoc/lang"
+	"github.com/chengyumeng/gomarkdoc/format"
+	"github.com/chengyumeng/gomarkdoc/lang"
 )
 
 type (
